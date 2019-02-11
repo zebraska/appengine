@@ -24,7 +24,7 @@ public class UserResource extends HttpServlet {
         if(users == null){
           users = UserDaoObjectify.getInstance().getAll();
           cache.put("users", users, Expiration.byDeltaSeconds(240),
-          MemcacheService.setPolicy.ADD_ONLY_IF_NOT_PRESENT);
+          MemcacheService.SetPolicy.ADD_ONLY_IF_NOT_PRESENT);
         }
         response.setContentType("application/json; charset=utf-8");
         response.getWriter().println(new Gson()
