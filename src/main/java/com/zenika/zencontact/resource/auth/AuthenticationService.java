@@ -1,7 +1,6 @@
 package com.zenika.zencontact.resource.auth;
 
 import com.google.appengine.api.users.*;
-import com.zenika.zencontact.domain.User;
 
 public class AuthenticationService{
 
@@ -32,6 +31,6 @@ public class AuthenticationService{
     }
 
     public String getUsername(){
-        return userService.getUser().getNickname();
+        return userService.getCurrentUser().getNickname();
     }
 }
