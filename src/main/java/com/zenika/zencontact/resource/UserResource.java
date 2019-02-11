@@ -34,6 +34,7 @@ public class UserResource extends HttpServlet {
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response)
       throws IOException {
+      MemcacheService cache = MemcacheServiceFactory.getMemcacheService();
     User user = new Gson().fromJson(request.getReader(), User.class);
     user.id(UserDaoObjectify.getInstance().save(user));
     cache.delete("users");
