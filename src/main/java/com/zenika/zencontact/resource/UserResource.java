@@ -3,7 +3,7 @@ package com.zenika.zencontact.resource;
 import com.zenika.zencontact.domain.User;
 import com.zenika.zencontact.persistence.UserRepository;
 import com.zenika.zencontact.persistence.objectify.UserDaoObjectify;
-import com.google.appengine.api.memcache;
+import com.google.appengine.api.memcache.*;
 import com.google.gson.Gson;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
