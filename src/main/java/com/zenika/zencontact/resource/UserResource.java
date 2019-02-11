@@ -36,6 +36,7 @@ public class UserResource extends HttpServlet {
       throws IOException {
     User user = new Gson().fromJson(request.getReader(), User.class);
     user.id(UserDaoObjectify.getInstance().save(user));
+    cache.delete("users");
     response.setContentType("application/json; charset=utf-8");
     response.setStatus(201);
     response.getWriter().println(new Gson().toJson(user));
