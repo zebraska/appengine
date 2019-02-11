@@ -6,6 +6,7 @@ import com.zenika.zencontact.persistence.objectify.UserDaoObjectify;
 import com.google.gson.Gson;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Iterables;
+import com.google.appengine.api.memcache.*;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
