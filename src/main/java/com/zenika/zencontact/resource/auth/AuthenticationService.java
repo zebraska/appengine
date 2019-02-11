@@ -1,6 +1,7 @@
 package com.zenika.zencontact.ressource.auth;
 
 import com.google.appengine.api.users.*;
+import com.zenika.zencontact.domain.User;
 
 public class AuthenticationService{
 
