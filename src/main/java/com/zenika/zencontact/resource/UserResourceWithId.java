@@ -44,6 +44,8 @@ public class UserResourceWithId extends HttpServlet {
   @Override
   public void doPut(HttpServletRequest request, HttpServletResponse response)
       throws IOException {
+    MemcacheService cache = MemcacheServiceFactory.getMemcacheService();
+    cache.delete("users");
     Long id = getId(request);
     if(id == null) {
         response.setStatus(404);
@@ -58,6 +60,8 @@ public class UserResourceWithId extends HttpServlet {
   @Override
   public void doDelete(HttpServletRequest request, HttpServletResponse response)
       throws IOException {
+    MemcacheService cache = MemcacheServiceFactory.getMemcacheService();
+    cache.delete("users");
     Long id = getId(request);
     if(id == null) {
         response.setStatus(404);
