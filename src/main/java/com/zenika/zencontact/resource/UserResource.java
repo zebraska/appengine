@@ -37,11 +37,11 @@ public class UserResource extends HttpServlet {
   public void doPost(HttpServletRequest request, HttpServletResponse response)
       throws IOException {
       MemcacheService cache = MemcacheServiceFactory.getMemcacheService();
-    User user = new Gson().fromJson(request.getReader(), User.class);
-    String birthdate = PartnerBirthdateService.getInstance().findBirthdate(
-      user.firstname,
-      user.lastname,
-    );
+      User user = new Gson().fromJson(request.getReader(), User.class);
+      String birthdate = PartnerBirthdateService.getInstance().findBirthdate(
+        user.firstname,
+        user.lastname,
+      )
 
     if(birthdate != null){
       try{
