@@ -40,8 +40,8 @@ public class UserResource extends HttpServlet {
       User user = new Gson().fromJson(request.getReader(), User.class);
       String birthdate = PartnerBirthdateService.getInstance().findBirthdate(
         user.firstname,
-        user.lastname,
-      )
+        user.lastname
+      );
 
     if(birthdate != null){
       try{
