@@ -6,6 +6,7 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 import com.google.gson.Gson;
 import com.zenika.zencontact.email.EmailService;
+import com.zenika.zencontact.domain.Email;
 
 public class EmailToSend extends HttpServlet{
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
