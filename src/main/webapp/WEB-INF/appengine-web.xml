@@ -5,5 +5,5 @@
   <threadsafe>true</threadsafe>
   <inbound-services>
     <service>mail</service>
-  <inbound-services>
+  </inbound-services>
 </appengine-web-app>
