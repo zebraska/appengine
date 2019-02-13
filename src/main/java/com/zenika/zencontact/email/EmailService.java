@@ -5,8 +5,8 @@ import java.util.*;
 import java.util.logging.Logger;
 import javax.mail.*;
 import javax.mail.internet.*;
-import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
+import javax.servlet.annotation.*;
+import javax.servlet.http.*;
 
 public class EmailService {
 
