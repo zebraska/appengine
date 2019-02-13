@@ -1,4 +1,4 @@
-/*package com.zenika.zencontact.email;
+package com.zenika.zencontact.email;
 
 import java.io.*;
 import java.util.*;
@@ -33,4 +33,4 @@ public class EmailService {
             } 
         } catch (Exception e) {}
     }
-}*/
+}
